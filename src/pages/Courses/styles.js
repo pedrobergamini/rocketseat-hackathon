@@ -2,22 +2,20 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   padding: 25px;
+
   ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 25px;
+
     li {
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
+      border-radius: 8px;
 
-      height: 150px;
-      border-radius: 12px;
-      background:
-        url('https://mundohacker.net.br/wp-content/uploads/2019/03/teste-de-programacao-emprego.jpg')
-        no-repeat center;
-      background-size: cover;
+      background: #ddd;
       margin-bottom: 20px;
+
       cursor: pointer;
 
       &:hover {
@@ -25,10 +23,16 @@ export const Container = styled.div`
         opacity: 0.7;
       }
 
+      img {
+        border-radius: 8px;
+        width: 100%;
+        height: 150px;
+      }
+
       strong {
-        color: #fff;
-        font-size: 20px;
+        font-size: 18px;
         text-align: center;
+        font-weight: normal;
         margin-top: 10px;
         padding-bottom: 20px;
       }

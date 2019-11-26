@@ -1,12 +1,12 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-import Welcome from './pages/Welcome';
+import Levels from './pages/Levels';
 
 export default function Routes() {
   return (
     <Switch>
-      <Route path="/welcome" component={Welcome} />
+      <Route path="/levels" component={Levels} />
     </Switch>
   );
 }

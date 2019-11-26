@@ -1,7 +1,28 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
-// import { Container } from './styles';
+import { Container } from './styles';
 
 export default function Levels() {
-  return <div />;
+  const [levels, setLevels] = useState([]);
+
+  useEffect(() => {
+    const levelsArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+    setLevels(levelsArray);
+  }, []);
+  return (
+    <Container>
+      <ul>
+        {levels.map(level => (
+          <li key={level}>
+            <img
+              src="https://blog.fellyph.com.br/wp-content/uploads/2016/06/react-js.png"
+              alt="Level"
+            />
+            <strong>Nível {level}</strong>
+          </li>
+        ))}
+      </ul>
+    </Container>
+  );
 }

@@ -16,10 +16,6 @@ export default function Levels() {
       <ul>
         {levels.map(level => (
           <li key={level} onClick={() => history.push(`/courses/${level}`)}>
-            <img
-              src="https://blog.fellyph.com.br/wp-content/uploads/2016/06/react-js.png"
-              alt="Level"
-            />
             <strong>Nível {level}</strong>
           </li>
         ))}

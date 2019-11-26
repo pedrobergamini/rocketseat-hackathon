@@ -11,11 +11,20 @@ export const Container = styled.div`
     li {
       display: flex;
       flex-direction: column;
+      border-radius: 8px;
 
       background: #ddd;
       margin-bottom: 20px;
 
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.05);
+        opacity: 0.7;
+      }
+
       img {
+        border-radius: 8px;
         width: 100%;
         height: 150px;
       }

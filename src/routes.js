@@ -1,14 +1,14 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-import Welcome from './pages/Welcome';
-import CourseDetails from './pages/CourseDetails';
+import Levels from './pages/Levels';
+import Courses from './pages/Courses';
 
 export default function Routes() {
   return (
     <Switch>
-      <Route path="/welcome" component={Welcome} />
-      <Route path="/CourseDetails" component={CourseDetails} />
+      <Route path="/levels" component={Levels} />
+      <Route exact path="/courses/:level" component={Courses} />
     </Switch>
   );
 }

@@ -1,9 +1,14 @@
 import React from 'react';
 import { Card, CardContent, Typography } from '@material-ui/core';
+import history from '~/services/history';
 
 import { Container } from './styles';
 
 export default function Details() {
+  function handleActivity() {
+    history.push('/courses/1/Introdução%20a%20Programação/32');
+  }
+
   return (
     <Container>
       <div className="image-title">
@@ -30,7 +35,7 @@ export default function Details() {
         </Typography>
         <div className="cards">
           <Card>
-            <div className="image-title">
+            <div className="image-title" onClick={handleActivity}>
               <img src="https://www1.racgp.org.au/getattachment/460451f5-7e0a-47a8-a1d5-e964b705e062/attachment.aspx" />
             </div>
             <CardContent>
@@ -43,7 +48,7 @@ export default function Details() {
             </CardContent>
           </Card>
           <Card>
-            <div className="image-title">
+            <div className="image-title" onClick={handleActivity}>
               <img src="https://www1.racgp.org.au/getattachment/460451f5-7e0a-47a8-a1d5-e964b705e062/attachment.aspx" />
             </div>
             <CardContent>
@@ -58,7 +63,7 @@ export default function Details() {
         </div>
         <div className="cards">
           <Card>
-            <div className="image-title">
+            <div className="image-title" onClick={handleActivity}>
               <img src="https://www1.racgp.org.au/getattachment/460451f5-7e0a-47a8-a1d5-e964b705e062/attachment.aspx" />
             </div>
             <CardContent>
@@ -71,7 +76,7 @@ export default function Details() {
             </CardContent>
           </Card>
           <Card>
-            <div className="image-title">
+            <div className="image-title" onClick={handleActivity}>
               <img src="https://www1.racgp.org.au/getattachment/460451f5-7e0a-47a8-a1d5-e964b705e062/attachment.aspx" />
             </div>
             <CardContent>
@@ -86,7 +91,7 @@ export default function Details() {
         </div>
         <div className="cards">
           <Card>
-            <div className="image-title">
+            <div className="image-title" onClick={handleActivity}>
               <img src="https://www1.racgp.org.au/getattachment/460451f5-7e0a-47a8-a1d5-e964b705e062/attachment.aspx" />
             </div>
             <CardContent>
@@ -99,7 +104,7 @@ export default function Details() {
             </CardContent>
           </Card>
           <Card>
-            <div className="image-title">
+            <div className="image-title" onClick={handleActivity}>
               <img src="https://www1.racgp.org.au/getattachment/460451f5-7e0a-47a8-a1d5-e964b705e062/attachment.aspx" />
             </div>
             <CardContent>

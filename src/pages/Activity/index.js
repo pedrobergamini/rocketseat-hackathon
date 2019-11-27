@@ -13,9 +13,13 @@ import {
   Button,
 } from '@material-ui/core';
 
+import history from '~/services/history';
 import { Container } from './styles';
 
 export default function Activity() {
+  function handleFinish() {
+    history.push('/');
+  }
   return (
     <Container>
       <div className="video-container">
@@ -99,32 +103,9 @@ export default function Activity() {
             </CardContent>
           </Card>
         </div>
-        <div className="exercise">
-          <Card>
-            <CardContent>
-              <FormControl component="fieldset">
-                <FormLabel component="legend">
-                  Curabitur pellentesque eleifend mauris, ut placerat magna.
-                  Vivamus felis eros, malesuada id turpis quis?
-                </FormLabel>
-                <FormGroup>
-                  <FormControlLabel control={<Checkbox />} label="Gilad Gray" />
-                  <FormControlLabel
-                    control={<Checkbox />}
-                    label="Jason Killian"
-                  />
-                  <FormControlLabel
-                    control={<Checkbox />}
-                    label="Antoine Llorca"
-                  />
-                </FormGroup>
-              </FormControl>
-            </CardContent>
-          </Card>
-        </div>
       </div>
       <div className="footer">
-        <Button variant="contained" color="secondary">
+        <Button variant="contained" color="secondary" onClick={handleFinish}>
           Finalizar
         </Button>
       </div>

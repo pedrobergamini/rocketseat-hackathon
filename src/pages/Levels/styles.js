@@ -13,8 +13,7 @@ export const Container = styled.div`
 
       height: 150px;
       border-radius: 12px;
-      background:
-        url('https://mundohacker.net.br/wp-content/uploads/2019/03/teste-de-programacao-emprego.jpg')
+      background: url('https://mundohacker.net.br/wp-content/uploads/2019/03/teste-de-programacao-emprego.jpg')
         no-repeat center;
       background-size: cover;
       margin-bottom: 20px;

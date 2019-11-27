@@ -43,6 +43,7 @@ export const Container = styled.div`
 
     > div {
       display: flex;
+      flex-direction: column;
       flex: 1;
       margin: 10px;
       padding: 100px auto;

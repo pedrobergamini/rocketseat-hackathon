@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 
 import history from '~/services/history';
 import { Container } from './styles';
 
-export default function Levels() {
+export default function Levels({ match }) {
   const [courses, setCourses] = useState([]);
 
   useEffect(() => {
@@ -23,7 +24,12 @@ export default function Levels() {
     <Container>
       <ul>
         {courses.map(course => (
-          <li key={course} onClick={() => history.push(`/courses/${course}`)}>
+          <li
+            key={course}
+            onClick={() =>
+              history.push(`/courses/${match.params.level}/${course}`)
+            }
+          >
             <img
               src="https://blog.fellyph.com.br/wp-content/uploads/2016/06/react-js.png"
               alt="Level"
@@ -35,3 +41,11 @@ export default function Levels() {
     </Container>
   );
 }
+
+Levels.propTypes = {
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      level: PropTypes.string,
+    }),
+  }).isRequired,
+};

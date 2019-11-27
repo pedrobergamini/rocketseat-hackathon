@@ -16,7 +16,7 @@ export const Logo = styled.div`
 
   strong {
     color: #000;
-    font-size: 20px;
+    font-size: 30px;
     border-bottom: 3px solid #aa5cb2;
     padding-bottom: 4px;
   }

@@ -1,6 +1,25 @@
 import React, { useState } from 'react';
 
 import { Container, Description, Title } from './styles';
+import {
+  Card,
+  CardActionArea,
+  CardActions,
+  CardMedia,
+  CardContent,
+  Typography,
+  Button,
+} from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles({
+  card: {
+    maxWidth: 345,
+  },
+  media: {
+    height: 140,
+  },
+});
 
 export default function DetalhesCurso() {
   const [seeMore, setSeeMore] = useState(false);
@@ -39,12 +58,46 @@ export default function DetalhesCurso() {
         </div>
         <div className="activities">
           <ul className="activities-list">
-            <li className="activity-element">
-              <div className="activity-link">
-                <img src="https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
-              </div>
-              <div className="activity-title">
-                <h3>1-Título da atividade</h3>
+            <li>
+              <Card>
+                <CardActionArea>
+                  <CardMedia
+                    image="/static/images/cards/contemplative-reptile.jpg"
+                    title="Contemplative Reptile"
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      Lizard
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      color="textSecondary"
+                      component="p"
+                    >
+                      Lizards are a widespread group of squamate reptiles, with
+                      over 6,000 species, ranging across all continents except
+                      Antarctica
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+                <CardActions>
+                  <Button size="small" color="primary">
+                    Share
+                  </Button>
+                  <Button size="small" color="primary">
+                    Learn More
+                  </Button>
+                </CardActions>
+              </Card>
+            </li>
+            <li>
+              <div className="activity-element">
+                <div className="activity-link">
+                  {/* <img src="https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" /> */}
+                </div>
+                <div className="activity-title">
+                  <h3>1 - Título da atividade</h3>
+                </div>
               </div>
             </li>
           </ul>

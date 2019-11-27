@@ -10,7 +10,7 @@ export default function Routes() {
     <Switch>
       <Route path="/levels" component={Levels} />
       <Route exact path="/courses/:level" component={Courses} />
-      <Route exact path="/details" component={Details} />
+      <Route exact path="/courses/:level/:course" component={Details} />
     </Switch>
   );
 }
